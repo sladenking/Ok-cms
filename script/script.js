@@ -70,6 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			nextSlide(slide, currentSlide, 'content__slider-item-active');
 			nextSlide(dot, currentSlide, 'dot-active');
 
+      
 		});
 
 		startSlide();
