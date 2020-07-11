@@ -30,10 +30,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
       prevSlide(slide, currentSlide, 'content__slider-item-active');
       prevSlide(dot, currentSlide, 'dot-active');
+
       currentSlide++;
       if (currentSlide >= slide.length) {
         currentSlide = 0;
       }
+
       nextSlide(slide, currentSlide, 'content__slider-item-active');
       nextSlide(dot, currentSlide, 'dot-active');
 
@@ -42,36 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const startSlide = (time = 3000) => {
 			interval = setInterval(autoPlaySlide, time);
 		};
-
-		slider.addEventListener('click', event => {
-			event.preventDefault();
-
-			const target = event.target;
-
-			if (!target.matches('.dot')) {
-				return;
-			} else {
-        dot.forEach((elem, i) => {
-					if (elem === target) {
-						currentSlide = i;
-					}
-				});
-      }
-
-			prevSlide(slide, currentSlide, 'content__slider-item-active');
-			prevSlide(dot, currentSlide, 'dot-active');
-
-			if (currentSlide >= slide.length) {
-				currentSlide = 0;
-			} else if (currentSlide < 0) {
-				currentSlide = slide.length - 1;
-			}
-
-			nextSlide(slide, currentSlide, 'content__slider-item-active');
-			nextSlide(dot, currentSlide, 'dot-active');
-
-      
-		});
 
 		startSlide();
 

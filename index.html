@@ -15,14 +15,31 @@
           <img src="img/logo.png" alt="flower" class="header__logo-img">
           <span class="header__logo-text">клиника медицинской косметологии</span>
         </div>
-        <div class="header__nav">
-          <a href="" class="header__nav-link">О клинике</a>
-          <a href="" class="header__nav-link">Что мы лечим</a>
-          <a href="" class="header__nav-link">Услуги <span>&#9660;</span></a>
-          <a href="" class="header__nav-link">Цены на услуги</a>
-          <a href="" class="header__nav-link">Доктора</a>
-          <a href="" class="header__nav-link">Контакты</a>
-        </div>
+        <ul class="header__nav">
+          <li class="li-main"><a href="" class="header__nav-link">О клинике</a></li>
+          <li class="li-main"><a href="" class="header__nav-link">Что мы лечим</a></li>
+          <li class="li-main"><a href="" class="header__nav-link">Услуги <span>&#9660;</span></a>
+            <ul class="header__nav-select">
+              <div><li class="li-first"><a class="header__nav-link">Дерматология</a></li></div>
+              <div><li class="li-first"><a class="header__nav-link">Дерматоонкология</a>
+                <ul class="header__nav-select-second">
+                  <div><li class="li-second"><a class="header__nav-link">Гемангиома лечение</a></li></div>
+                  <div><li class="li-second"><a class="header__nav-link">Лечение базалиом</a></li></div>
+                  <div><li class="li-second"><a class="header__nav-link">Диагностика меланом</a></li></div>
+                  <div><li class="li-second"><a class="header__nav-link">Лечение ксантелазм (ксантом)</a></li></div>
+                </ul>
+              </li></div>
+              <div><li class="li-first"><a class="header__nav-link">Медицинская косметология</a></li></div>
+              <div><li class="li-first"><a class="header__nav-link">Венерология</a></li></div>
+              <div><li class="li-first"><a class="header__nav-link">Трихология</a></li></div>
+              <div><li class="li-first"><a class="header__nav-link">Онихология</a></li></div>
+              <div><li class="li-first"><a class="header__nav-link">Урология</a></li></div>
+            </ul>
+          </li>
+          <li class="li-main"><a href="" class="header__nav-link">Цены на услуги</a></li>
+          <li class="li-main"><a href="" class="header__nav-link">Доктора</a></li>
+          <li class="li-main"><a href="" class="header__nav-link">Контакты</a></li>
+        </ul>
         <div class="header__contacts">
           <span class="header__contacts-text">Свяжитесь с нами:</span>
           <span class="header__contacts-phone">+380 67 580 05 37</span>
@@ -30,6 +47,15 @@
       </div>
       <div class="content">
         <div class="content__slider">
+          <div class="content__slider-info">
+            <img src="img/brace.svg" alt="brace" class="content__slider-info-brace">
+            <div class="content__slider-info-wrapper">
+              <span class="content__slider-info-title">Удаление папилом</span>
+              <span class="content__slider-info-subtitle">оплати единоразово 7 процедур —</span>
+              <span class="content__slider-info-subtitle">получи скидку <span>50%</span></span>
+            </div>
+            <img src="img/brace.svg" alt="brace" class="content__slider-info-brace">
+          </div>
           <ul class="content__slider-dots"></ul>
           <div class="content__slider-item content__slider-item-active"></div>
           <div class="content__slider-item"></div>

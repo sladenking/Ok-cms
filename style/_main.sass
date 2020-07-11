@@ -1,4 +1,5 @@
 $primary: #78b660
+$fontColor: #363636
   
 html 
   box-sizing: border-box
@@ -15,7 +16,7 @@ html
 body
   margin: 0
   background-color: #fff
-  color: black
+  color: $fontColor
   background: url('../img/flower.svg') no-repeat top -400px right -600px / 800px,  url('../img/flower.svg') no-repeat bottom -500px left -550px / 800px
 
 .container
@@ -50,27 +51,83 @@ body
       text-align: right
   &__nav
     width: 590px
+    list-style: none
     display: flex
     justify-content: space-between
+    &-select
+      list-style: none
+      display: none
+      &-second
+        list-style: none
+        display: none
     &-link
-      color: #363636
+      color: $fontColor
       text-decoration: none
       font-size: 14px
       font-weight: 400
       letter-spacing: 0.42px
-      padding-bottom: 3px
       +thin
       span
         color: $primary
         display: inline
         font-size: 10px
+    .li-main
       &:nth-child(2)
         border-bottom: 2px solid $primary
+      &:hover .header__nav-select
+        display: block
+        position: absolute
+        background:#d7e9ce
+        opacity: 0.9    
+        width: 250px
+        height: 215px
+        padding: 20px 40px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: start
+        div
+          margin-left: -40px
+          width: 250px
+          cursor: pointer
+        .li-first
+          padding-left: 20px
+          color: #000
+          +roman
+          font-size: 14px
+          font-weight: 300
+          line-height: 26px
+          width: 100%
+          &:hover .header__nav-select-second
+            display: block
+            position: absolute
+            background-color: #f2f2f2
+            margin-top: -72px
+            margin-left: 230px
+            opacity: 0.9
+            padding: 15px 40px
+            width: 250px
+            height: 215px
+            div
+              margin-left: -20px
+              width: 250px
+              cursor: pointer
+            .li-second a
+              +thin
+              font-size: 12px
+              font-weight: 300
+              line-height: 26px
+              &:hover
+                border-bottom: 2px solid $primary
+          &:hover
+            background: url('../img/arrow-right.png') no-repeat center right 20px, #f2f2f2
+          
         
   &__contacts
     &-text
       +roman
       font-size: 14px
+      text-align: right
     &-phone
       +thin
       font-size: 18px
@@ -81,6 +138,34 @@ body
   &__slider
     margin-top: 50px
     height: 729px
+    &-info
+      position: absolute
+      margin-top: 80px
+      margin-left: 65px
+      display: flex
+      justify-content: space-between
+      width: 430px
+      &-brace
+        height: 120px
+        &:nth-last-child(1)
+          transform: rotate(180deg)
+      &-title
+        font-size: 30px
+        font-weight: 700
+        +black
+        display: block
+        margin-bottom: 20px
+      &-subtitle        
+        display: flex
+        +thin
+        font-size: 23px;
+        font-weight: 400;
+        span
+          margin-left: 25px
+          color: $primary
+          +bold
+          font-size: 50px
+          font-weight: 700
     &-item
       height: 100%
       background: url('../img/girl.png') no-repeat right top / 450px, url('../img/flower.png') no-repeat left bottom / 700px
@@ -94,7 +179,6 @@ body
       margin-left: 130px
       margin-top: 420px
       .dot
-        cursor: pointer
         height: 14px
         width: 14px
         margin: 0 8px
@@ -122,4 +206,3 @@ body
       font-size: 14px
       font-weight: 400
       line-height: 26px
-      letter-spacing: 0.7px
